@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(moveit_planning_helper)
 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -14,7 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   trajectory_msgs
   convenience_ros_functions
-  shape_tools
+  geometric_shapes
 )
 
 ###################################
@@ -31,7 +33,7 @@ catkin_package(
   LIBRARIES moveit_planning_helper
   CATKIN_DEPENDS actionlib actionlib_msgs eigen_conversions 
         manipulation_msgs moveit_ros_planning_interface roscpp tf trajectory_msgs
-        convenience_ros_functions shape_tools
+        convenience_ros_functions geometric_shapes
 )
 
 ###########

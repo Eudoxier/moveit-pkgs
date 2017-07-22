@@ -1,3 +1,5 @@
+#include <iostream>
+#include <memory>
 #include <moveit_controller_multidof/MultiDOFControllerManager.h>
 #include <moveit_controller_multidof/ForwardingControllerHandle.h>
 
